@@ -14,7 +14,8 @@ public class Main {
 //        int e = howManyYears(111.2, 150);
 //        System.out.println(e);
 //        sillyNumbers();
-        sillyNumbers2();
+//        sillyNumbers2();
+        dollarsAndStars();
     }
 
     public static int addOdds(int n) {
@@ -37,7 +38,7 @@ public class Main {
 //
 //        }
 //    }
-    public static int sillyNumbers(){
+    public static void sillyNumbers(){
             for(int i=0; i < 3; i++) {
                 for (int k = 0; k < 10; k++) {
                     for(int j=0; j<3; j++)
@@ -45,17 +46,41 @@ public class Main {
                 }
                 System.out.println();
             }
-            return 0;
-        }
-    public static int sillyNumbers2(){
+    }
+    public static void sillyNumbers2(){
         for(int i=0; i<4; i++){
             for (int k = 9; k >= 0; k--) {
-                for(int j=0; j<3; j++)
+                for(int j=0; j<k; j++)
                     System.out.print(k);
             }
             System.out.println();
         }
         }
+    public static void dollarsAndStars(){
+        for(int i=0; i<7; i++){
+            for(int k=0; k<i; k++){
+                System.out.print("**");
+            }
+            for(int j=7; j>i; j--){
+                System.out.print("$");
+            }
+            for(int k=7; k>i; k--){
+                System.out.print("**");
+            }
+            for(int j=7; j>i; j--){
+                System.out.print("$");
+            }
+            for(int k=0; k<i; k++){
+                System.out.print("**");
+            }
+            System.out.println();
+
+        }
+
+//        for(int k=0; k<i; k=k+2){
+////                System.out.print("*");
+//            }
+    }
 }
 
 /*Results:
@@ -72,5 +97,20 @@ public class Main {
         000111222333444555666777888999
         000111222333444555666777888999
         000111222333444555666777888999
+
+        sillyNumbers2;
+        999999999888888887777777666666555554444333221
+        999999999888888887777777666666555554444333221
+        999999999888888887777777666666555554444333221
+        999999999888888887777777666666555554444333221
+
+        dollarsAndStars:
+        $$$$$$$**************$$$$$$$
+        **$$$$$$************$$$$$$**
+        ****$$$$$**********$$$$$****
+        ******$$$$********$$$$******
+        ********$$$******$$$********
+        **********$$****$$**********
+        ************$**$************
 
 */

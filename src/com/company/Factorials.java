@@ -8,6 +8,7 @@ public class Factorials {
             a = calcFactorial(i);
             System.out.println(a);
             }
+        System.out.printf("e is %2.3f \n", calcEX(3));
         double c = calcE();
         System.out.println(c);
     }
@@ -31,7 +32,17 @@ public class Factorials {
         }
         return e;
     }
-
+    public static double calcEX(int x){
+        double e = 1;
+        double olde = 0;
+        int b = 1;
+        while(e-olde > .001){
+            olde = e;
+            e += 1.0*Math.pow(x,b)/calcFactorial(b);
+            b++;
+        }
+        return e;
+    }
 }
 
 /*

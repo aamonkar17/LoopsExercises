@@ -3,18 +3,24 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-//        int a = addOdds(5);
-//        System.out.println(a);
-//        int b = addOdds(6);
-//        System.out.println(b);
-//        int c = addOdds(15);
-//        System.out.println(c);
-//        int d = howManyYears(111.2, 120);
-//        System.out.println(d);
-//        int e = howManyYears(111.2, 150);
-//        System.out.println(e);
-//        sillyNumbers();
-//        sillyNumbers2();
+        int a = addOdds(5);
+        System.out.println(a);
+        int b = addOdds(6);
+        System.out.println(b);
+        int c = addOdds(15);
+        System.out.println(c);
+        int d = howManyYears(111.2, 120);
+        System.out.println(d);
+        int e = howManyYears(111.2, 150);
+        System.out.println(e);
+        int f = sumDigits(17);
+        System.out.println(f);
+        int g = sumDigits(173);
+        System.out.println(g);
+        int h = sumDigits(1739);
+        System.out.println(h);
+        sillyNumbers();
+        sillyNumbers2();
         dollarsAndStars();
     }
 
@@ -33,11 +39,15 @@ public class Main {
         }
         return t;
     }
-//    public static int sumDigits(int sum) {
-//        while () {
-//
-//        }
-//    }
+    public static int sumDigits(int sum) {
+        int total = 0;
+        while (sum > 0)
+        {
+            total += sum % 10;
+            sum /= 10;
+        }
+        return total;
+    }
     public static void sillyNumbers(){
             for(int i=0; i < 3; i++) {
                 for (int k = 0; k < 10; k++) {
@@ -76,10 +86,6 @@ public class Main {
             System.out.println();
 
         }
-
-//        for(int k=0; k<i; k=k+2){
-////                System.out.print("*");
-//            }
     }
 }
 
@@ -92,6 +98,11 @@ public class Main {
         howManyYears:
         7
         27
+
+        sumDigits:
+        8
+        11
+        20
 
         sillyNumbers;
         000111222333444555666777888999

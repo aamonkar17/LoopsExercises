@@ -8,6 +8,8 @@ public class Factorials {
             a = calcFactorial(i);
             System.out.println(a);
             }
+        double c = calcE();
+        System.out.println(c);
     }
 
     public static long calcFactorial(int x) {
@@ -19,8 +21,17 @@ public class Factorials {
     }
 
     public static double calcE(){
-        
+        double e = 1;
+        double olde = 0;
+        int b = 1;
+        while(e-olde > .001){
+            olde = e;
+            e += 1.0/calcFactorial(b);
+            b++;
+        }
+        return e;
     }
+
 }
 
 /*
@@ -47,6 +58,7 @@ Results:
     121645100408832000
     2432902008176640000
 
-
+    calcE:
+    2.7182539682539684
 
  */
